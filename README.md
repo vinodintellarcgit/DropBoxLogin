@@ -17,13 +17,16 @@ And Click Create App.
 
 Now open your plist as a source and paste following snipet. 
 
+```
 <key>LSApplicationQueriesSchemes</key>
     <array>
         <string>dbapi-8-emm</string>
         <string>dbapi-2</string>
     </array>
+   
+ ```
 
-
+```
 <key>CFBundleURLTypes</key>
     <array>
         <dict>
@@ -35,7 +38,7 @@ Now open your plist as a source and paste following snipet.
             <string></string>
         </dict>
     </array>
-
+```
 
 
 
