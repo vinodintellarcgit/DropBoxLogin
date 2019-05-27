@@ -23,6 +23,7 @@ Now open your plist as a source and paste following snipet.
         <string>dbapi-2</string>
     </array>
 
+
 <key>CFBundleURLTypes</key>
     <array>
         <dict>
@@ -35,51 +36,6 @@ Now open your plist as a source and paste following snipet.
         </dict>
     </array>
 
-
-Now open your project's AppDelegate and paste your App Key in didFinishLaunchingWithOptions Method.
-
-
-import SwiftyDropbox
-
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-         DropboxClientsManager.setupWithAppKey("Put your App Key here")
-        return true
-    }
-
-
-You can commence the auth flow by calling authorizeFromController:controller:openURL method in your Projects's view controller.
-
-import SwiftyDropbox
-
-func myButtonInControllerPressed() {
-    DropboxClientsManager.authorizeFromController(UIApplication.shared,
-                                                  controller: self,
-                                                  openURL: { (url: URL) -> Void in
-                                                    UIApplication.shared.openURL(url)
-                                                  })
-}
-
-Handle redirect back into SDK
-
-To handle the redirection you should add the following code in your AppDelegate file.
-
-
-import SwiftyDropbox
-
-func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-    if let authResult = DropboxClientsManager.handleRedirectURL(url) {
-        switch authResult {
-        case .success:
-            print("Success! User is logged into Dropbox.")
-        case .cancel:
-            print("Authorization flow was manually canceled by user!")
-        case .error(_, let description):
-            print("Error: \(description)")
-        }
-    }
-    return true
-}
 
 
 
