@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5487978BD4D53D8538B27478 /* Pods_IntDropBoxDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B93768FBC33F397C2E863DF /* Pods_IntDropBoxDemo.framework */; };
 		81C6F987229969C100466967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6F986229969C100466967 /* AppDelegate.swift */; };
 		81C6F989229969C100466967 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6F988229969C100466967 /* ViewController.swift */; };
 		81C6F98C229969C100466967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C6F98A229969C100466967 /* Main.storyboard */; };
 		81C6F98E229969C300466967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C6F98D229969C300466967 /* Assets.xcassets */; };
 		81C6F991229969C300466967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C6F98F229969C300466967 /* LaunchScreen.storyboard */; };
+		81C6F99B22996B7100466967 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6F99A22996B7100466967 /* Constant.swift */; };
+		81C6F99D22996F9D00466967 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6F99C22996F9D00466967 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B93768FBC33F397C2E863DF /* Pods_IntDropBoxDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntDropBoxDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C6F983229969C100466967 /* IntDropBoxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntDropBoxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C6F986229969C100466967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81C6F988229969C100466967 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		81C6F98D229969C300466967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81C6F990229969C300466967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81C6F992229969C300466967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81C6F99A22996B7100466967 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		81C6F99C22996F9D00466967 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		99174B946A0B6FF055B80F80 /* Pods-IntDropBoxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntDropBoxDemo.debug.xcconfig"; path = "Target Support Files/Pods-IntDropBoxDemo/Pods-IntDropBoxDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		FA659AEA1A0CD648979115F6 /* Pods-IntDropBoxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntDropBoxDemo.release.xcconfig"; path = "Target Support Files/Pods-IntDropBoxDemo/Pods-IntDropBoxDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5487978BD4D53D8538B27478 /* Pods_IntDropBoxDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40A560E2D18281B643B32116 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99174B946A0B6FF055B80F80 /* Pods-IntDropBoxDemo.debug.xcconfig */,
+				FA659AEA1A0CD648979115F6 /* Pods-IntDropBoxDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		688791979BC3605305758882 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B93768FBC33F397C2E863DF /* Pods_IntDropBoxDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81B45302229BB12600309368 /* Appdelegate */ = {
+			isa = PBXGroup;
+			children = (
+				81C6F986229969C100466967 /* AppDelegate.swift */,
+			);
+			path = Appdelegate;
+			sourceTree = "<group>";
+		};
+		81B45303229BB14200309368 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				81B45302229BB12600309368 /* Appdelegate */,
+				81C6F99822996B3A00466967 /* Utility */,
+				81B45304229BB15000309368 /* Controllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		81B45304229BB15000309368 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				81C6F99C22996F9D00466967 /* LoginViewController.swift */,
+				81C6F988229969C100466967 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		81C6F97A229969C100466967 = {
 			isa = PBXGroup;
 			children = (
 				81C6F985229969C100466967 /* IntDropBoxDemo */,
 				81C6F984229969C100466967 /* Products */,
+				40A560E2D18281B643B32116 /* Pods */,
+				688791979BC3605305758882 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +109,29 @@
 		81C6F985229969C100466967 /* IntDropBoxDemo */ = {
 			isa = PBXGroup;
 			children = (
-				81C6F986229969C100466967 /* AppDelegate.swift */,
-				81C6F988229969C100466967 /* ViewController.swift */,
+				81B45303229BB14200309368 /* Sources */,
 				81C6F98A229969C100466967 /* Main.storyboard */,
 				81C6F98D229969C300466967 /* Assets.xcassets */,
 				81C6F98F229969C300466967 /* LaunchScreen.storyboard */,
 				81C6F992229969C300466967 /* Info.plist */,
 			);
 			path = IntDropBoxDemo;
+			sourceTree = "<group>";
+		};
+		81C6F99822996B3A00466967 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				81C6F99922996B4A00466967 /* Constants */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		81C6F99922996B4A00466967 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				81C6F99A22996B7100466967 /* Constant.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81C6F995229969C300466967 /* Build configuration list for PBXNativeTarget "IntDropBoxDemo" */;
 			buildPhases = (
+				130433A718C9660CD17007E5 /* [CP] Check Pods Manifest.lock */,
 				81C6F97F229969C100466967 /* Sources */,
 				81C6F980229969C100466967 /* Frameworks */,
 				81C6F981229969C100466967 /* Resources */,
+				68DFEA74AC02A85246D176EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +202,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		130433A718C9660CD17007E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IntDropBoxDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68DFEA74AC02A85246D176EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IntDropBoxDemo/Pods-IntDropBoxDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyDropbox/SwiftyDropbox.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDropbox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IntDropBoxDemo/Pods-IntDropBoxDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		81C6F97F229969C100466967 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C6F99D22996F9D00466967 /* LoginViewController.swift in Sources */,
 				81C6F989229969C100466967 /* ViewController.swift in Sources */,
 				81C6F987229969C100466967 /* AppDelegate.swift in Sources */,
+				81C6F99B22996B7100466967 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +403,7 @@
 		};
 		81C6F996229969C300466967 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99174B946A0B6FF055B80F80 /* Pods-IntDropBoxDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +421,7 @@
 		};
 		81C6F997229969C300466967 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA659AEA1A0CD648979115F6 /* Pods-IntDropBoxDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
